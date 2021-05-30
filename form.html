@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="form.css">
+<!-- Navbar -->
+<link rel="stylesheet" href="css/navbar.css">
+<link rel="stylesheet" href="autre.css">
+<!-- Footer -->
+<link rel="stylesheet" href="css/footer.css">    <title>Formulaire commande</title>
+</head>
+<body>
+    <nav class="navbar">
+       
+        <div class="max-width">
+            <div class="logo"><a href="index.html">Funko <span>Anime</span></a></div>
+            <div class="max-width-menu">
+                <ul class="menu">
+                    <li><a href="autre.html">Home</a></li>
+                </ul>
+                <div class="menu-btn">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+
+            <ul class="space-user">
+                <li><i style="color: white; padding: 5px;" class="fas fa-user"></i><a href="">Mon Compte</a></li>
+                <li class="panier"><i style="color: white; padding: 5px;" class="fas fa-shopping-basket"></i><a href="panier.html">Panier</a> </li>
+                <li><i style="color: white; padding: 5px;" class="fas fa-star"></i><a href="">Ma Collection</a></li>
+            </ul>   
+        </div>
+    </nav>
+
+    <div class="panier">
+        <div class="message">
+          <p>Votre panier est vide</p>
+        </div>
+    </div>
+
+    
+
+
+    <div id="caisse">
+        <h1>1.ADRESSE DE LIVRAISON</h1>
+            <h2>Finalisation de la commande</h2>
+
+            <form action="">
+
+                <fieldset>
+                    <legend><strong>Identité</strong></legend>
+                    <label for="nom">*Nom :</label>
+                    <input type="text" name="nom" id="nom" required>
+
+                    <label for="prenom">*Prénom :</label>
+                    <input type="text" name="prenom" id="prenom" required>
+                </fieldset>
+
+                <fieldset>
+                    <legend><strong>Informations</strong></legend>
+
+                    <label for="adresse" name="adresse">*Adresse :</label>
+                    <input type="text" name="adresse" id="adresse" placeholder=" Ex: 8 rue du pop" required>
+
+                    <label for="CP" name="CP">*Code Postal :</label>
+                    <input type="number" name="CP" id="CP" placeholder=" Ex:78000" required>
+
+                    <label for="ville" name="ville">*Ville :</label>
+                    <input type="ville" name="ville" id="ville" required>
+
+                    <label for="email" name="email">*E-mail :</label>
+					<input type="email" name="email" id="email" placeholder=" urbex@gmail.net" required>
+
+                    <label for="tel" name="tel">Téléphone :</label>
+                    <input type="tel" name="tel" id="tel" placeholder="+33" required>
+
+                </fieldset>
+
+                <fieldset>
+                    <legend><strong>Commentaires</strong></legend>
+                    <textarea name="texteFormulaire" id="texteFormulaire" cols="30" rows="10"></textarea>
+                </fieldset>
+            </form>
+
+            <button class="btn-valider" id="valider" onclick="btnValiderForm">VALIDER LA COMMANDE</button>
+    </div>
+
+        <div id="commande-check" style="display: none;">
+            
+
+        <pre><p>Merci <span id="leNom"></span> <span id="lePrenom"></span> pour votre commande</p></pre>
+        <p>Vous recevrez un email et un sms de confirmation (<span id="lemail"></span>, <span id="leTel"></span>)</p>
+        <p>Votre addresse de livraison :
+            <span id="lAdresse"></span><br>
+            <span id="leCP"></span>,
+            <span id="laVille"></span><br>
+            <span id="votreCommentaires"></span>
+        </p>
+        </div>
+
+
+
+
+<script src="form.js"></script>
+</body>
+</html>

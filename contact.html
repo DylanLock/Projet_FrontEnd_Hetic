@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Loutre Super-Agréables - Projet Blanc</title>
+	<!-- CSS reset -->
+	<link rel="stylesheet" href="https://meyerweb.com/eric/tools/css/reset/reset.css">
+	<!-- Global -->
+	<link rel="stylesheet" href="css/global.css">
+	<!-- Navbar -->
+	<link rel="stylesheet" href="css/navbar.css">
+	<!-- Footer -->
+	<link rel="stylesheet" href="css/footer.css">
+	<style>
+		body{
+			background: url(img1/urbex2.jpg);
+			background-position: center;
+		}
+	fieldset{
+	margin: 27px;
+    padding: 14px;
+    border: 2px solid;
+    font-size: 100%;
+    vertical-align: baseline;
+	}
+	h1{
+		font-size: x-large;
+	}
+	strong{
+		font-family: fantasy;
+    font-size: larger;
+    color: white;
+    text-shadow: 2px 3px black;
+	}
+	label,span{
+		font-weight: 700;
+	}
+	.contact-valider {
+    margin: 0 auto;
+    text-align: center;
+    padding: 0vh;
+	}
+	button {
+	display: flex;
+    color: rgb(255, 255, 255);
+    background-color: #5c7f9b;
+    font-size: 12px;
+    margin: 10px auto;
+    width: 18vh;
+    font-weight: 800;
+    justify-content: center;
+    padding: 6px 7px;
+    border: none;
+    transition: all 0.3s ease;
+	}
+	button:hover{
+		color: rgb(255, 255, 255);
+		background-color: black;
+	}
+	.panneau-contact {
+	height: 80vh;
+    width: 71vh;
+    background: #b0cce3c9;
+    margin: 30px auto 128px;
+    padding: 15px;
+	}
+	.title{
+		font-size: xx-large;
+	}
+
+	</style>
+</head>
+<body>
+
+	<header>
+		
+		<nav class="navbar">
+       
+			<div class="max-width">
+				<div class="logo"><a href="index.html">Urbex <span>Life</span></a></div>
+				<ul class="space-user">
+					<li><a href="#">Accueil</a></li>
+					<li><a href="autre.html" class="active">Mon Theme</a></li>
+					<li><a href="boutique.html">Boutique</a></li>
+					<li><a href="contact.html">Contact</a></li>
+				</ul>   
+			</div>
+		</nav>
+	</header>
+
+
+<div id="contact">
+	<fieldset class="panneau-contact">
+		<legend class="title"><strong>Contactez-moi !</strong></legend>
+			<form action="" id="formContact" >
+				<fieldset>
+					<legend><strong>E-Mail</strong></legend>
+					<input type="email" name="email" id="email" placeholder=" loulou@gmail.net" required>
+				</fieldset>
+
+				<fieldset>
+					<legend><strong>Message:</strong></legend>
+					<textarea name="texteFormulaire" id="message" cols="30" rows="10" placeholder="Message..." required></textarea>
+
+					<select name="type">
+						<option value="">--Type de message--</option>
+						<option value="urgence-vitale">urgence vitale</option>
+						<option value="urgent">Urgent</option>
+						<option value="semi-urgent">Semi-urgent</option>
+						<option value="non-urgent">Non-urgent</option>
+					</select>
+				</fieldset>
+
+				<fieldset>
+					<legend><strong>Coordonnées</strong></legend>
+					<input type="text" name="nom"id="nom" placeholder="Nom ou Raison sociale " required>
+					<input type="tel" name="tel" id="tel" placeholder="Téléphone" pattern="[0-9]{10}" required>
+				</fieldset>
+
+				<div class="contact-valider">
+					<input type="checkbox" name="valid" required><span>J'accepte je sais pas quoi</span><br>
+					<button type="submit" class="btn-valider" id="valider" onclick="btnValiderForm">VALIDER LA COMMANDE</button>
+				</div>
+			</form>
+	</fieldset>
+</div>
+	
+
+
+<!-- Footer -->
+<footer>
+	<!-- Adresse -->
+	<section>
+		<p>Société Urbex Life</p>
+		<p>10 rue des lieux abandonnés</p>
+		<p>000000</p>
+	</section>
+	<!-- Réseaux sociaux -->
+	<section>
+			<a href="https://www.facebook.com/sheldon78000/"><img src="img1/reseau/icons8-facebook-48.png" alt=""></a>
+			<a href="https://www.instagram.com/yanny_appadoo/"><img src="img1/reseau/icons8-instagram-60.png" alt=""></a>
+			<a href="https://www.linkedin.com/in/yanny-appadoo/"><img src="img1/reseau/icons8-linkedin-50.png" alt=""></a>
+			<a href="https://www.instagram.com/yannyappadoo/"><img src="img1/reseau/icons8-instagram-60.png" alt=""></a>
+			<a href="https://github.com/YannyAppadoo"><img src="img1/reseau/icons8-github-50.png" alt=""></a>
+	</section>
+	<!-- Mentions -->
+	<section>
+		<span>Copyright 2021 Yanny - A - </span>
+		<a href="https://fr.wikipedia.org/wiki/Mentions_l%C3%A9gales">Mentions légales</a>
+	</section>
+</footer>
+	
+	<!-- JS global -->
+	<script>
+		document.querySelector('#formContact').addEventListener("submit", mafonction);
+	
+	</script>
+</body>
+</html

@@ -1,0 +1,39 @@
+
+
+	/* Hero */
+	#urbex {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		row-gap: 30px;
+		align-items: center;
+		color: #fff;
+		height: 100vh;
+		background: url( "img1/avion.JPG" );
+		
+	}
+	#urbex h1 {
+		font-size: 4em;
+		font-weight: bold;
+		text-align: center;
+		text-shadow: 3px 2px black;
+	}
+	#urbex a {
+		color: inherit;
+		font-size: 1.6em;
+		text-shadow: 3px 1px black;
+	}
+
+	section#photos {
+		display: flex;
+		flex-wrap: wrap;
+		align-content: flex-start;
+		padding: 10vh 0px;
+		justify-content: center;
+	}
+	section#photos img {
+	    height: 35vh;
+	}
+	section#photos a {
+		padding: 2px;
+	}

@@ -1,0 +1,31 @@
+.message{
+border: 2px solid;
+width: 50vh;
+margin: 112px auto;
+padding: 5px;
+font-size: 1.5em;
+text-align: center;
+background-color: white;
+}
+
+button {
+  display: flex;
+  color: rgb(255, 255, 255);
+  background-color: #76b8ff;
+  font-size: 12px;
+  margin: 0 auto;
+  width: 18vh;
+  font-weight: 800;
+  justify-content: center;
+  padding: 6px 7px;
+  transition: all 0.3s ease;
+}
+
+#commande-check{
+  display: block;
+    background: #8cf88c94;
+    text-align: center;
+    padding: 36px;
+    text-shadow: 2px 1px 2px #5c7f9b;
+}
+

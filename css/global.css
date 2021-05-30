@@ -1,0 +1,39 @@
+/* Variables */
+:root {
+	--navbar-height: 80px;
+	--navbar-padding: 10px;
+
+	--footer-padding: 10px;
+
+	--border-color: #0003;
+}
+
+/* Police d'écriture */
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,700;1,400&display=swap');
+html {
+	font-family: 'Barlow', sans-serif;
+}
+
+/* Smartphone */
+@media screen and ( max-width: 600px ) {
+	/* Variables */
+	:root {
+		--global-horizontal-padding: 10px;
+	}
+}
+
+/* Desktop */
+@media screen and ( min-width: 601px ) {
+	/* Variables */
+	:root {
+		--global-horizontal-padding: 40px;
+	}
+}
+
+/* Ultra-Wide */
+@media screen and ( min-width: 1200px ) {
+	/* Variables */
+	:root {
+		--global-horizontal-padding: 10vw;
+	}
+}

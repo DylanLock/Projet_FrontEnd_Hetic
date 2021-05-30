@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <!-- Navbar -->
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="autre.css">
+    <!-- Footer -->
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="panier.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>Urbex Life</title>
+    <style>
+      body{
+        background: url(img1/urbex2.jpg);
+        background-position: center;
+      }
+      fieldset{
+	  margin: 27px;
+    padding: 14px;
+    border: 2px solid;
+    font-size: 100%;
+    vertical-align: baseline;
+	}
+	h1{
+		font-size: x-large;
+	}
+	strong{
+		font-family: fantasy;
+    font-size: larger;
+    color: white;
+    text-shadow: 2px 3px black;
+	}
+	label,span{
+		font-weight: 700;
+	}
+	.contact-valider {
+    margin: 0 auto;
+    text-align: center;
+    padding: 0vh;
+	}
+	button {
+	display: flex;
+    color: rgb(255, 255, 255);
+    background-color: #5c7f9b;
+    font-size: 12px;
+    margin: 10px auto;
+    width: 18vh;
+    font-weight: 800;
+    justify-content: center;
+    padding: 6px 7px;
+    border: none;
+    transition: all 0.3s ease;
+	}
+	button:hover{
+		color: rgb(255, 255, 255);
+		background-color: black;
+	}
+  input{
+    margin: 10px;
+  }
+  #caisse{
+    display: block;
+    background: #bed6efe0;
+    text-align: center;
+    margin: 0 auto;
+    height: 105vh;
+    width: 104vh;
+  }
+    </style>
+</head>
+<body>
+
+  <header>	
+		<nav class="navbar">
+       
+			<div class="max-width">
+				<div class="logo"><a href="index.html">Urbex <span>Life</span></a></div>
+				<ul class="space-user">
+					<li><a href="autre.html">Accueil</a></li>
+					<li><a href="boutique.html">Boutique</a></li>
+					<li><a href="contact.html">Contact</a></li>
+                    <li class="panier"><i style="color: white; padding: 5px;" class="fas fa-shopping-basket"></i><a href="panier.html">Panier</a> </li>
+				</ul>   
+			</div> 
+		</nav>
+	</header>
+    
+    <div class="panier">
+       <div class="message">
+         <p>Votre panier est vide</p>
+       </div>
+
+       <button id="commander" onclick="btnCommander">
+         Commander
+       </button>
+    </div>
+
+    <div id="caisse" style="display: none;">
+          <h2>Finalisation de la commande</h2>
+
+          <form action="">
+
+              <fieldset>
+                  <legend><strong>Identité</strong></legend>
+                  <label for="nom">*Nom :</label>
+                  <input type="text" name="nom" id="nom" required>
+
+                  <label for="prenom">*Prénom :</label>
+                  <input type="text" name="prenom" id="prenom" required>
+              </fieldset>
+
+              <fieldset>
+                  <legend><strong>Informations</strong></legend>
+
+                  <label for="adresse" name="adresse">*Adresse :</label>
+                  <input type="text" name="adresse" id="adresse" placeholder=" Ex: 8 rue du pop" required>
+
+                  <label for="CP" name="CP">*Code Postal :</label>
+                  <input type="number" name="CP" id="CP" placeholder=" Ex:78000" required>
+
+                  <label for="ville" name="ville">*Ville :</label>
+                  <input type="ville" name="ville" id="ville" required>
+
+                  <label for="email" name="email">*E-mail :</label>
+        <input type="email" name="email" id="email" placeholder=" urbex@gmail.net" required>
+
+                  <label for="tel" name="tel">Téléphone :</label>
+                  <input type="tel" name="tel" id="tel" placeholder="+33" required>
+
+              </fieldset>
+
+              <fieldset>
+                  <legend><strong>Commentaires</strong></legend>
+                  <textarea name="texteFormulaire" id="texteFormulaire" cols="30" rows="10"></textarea>
+              </fieldset>
+          </form>
+
+          <button class="btn-valider" id="valider" onclick="btnValiderForm">VALIDER LA COMMANDE</button>
+  </div>
+
+      <div id="commande-check" style="display: none;">
+          
+
+      <pre><p>Merci <span id="leNom"></span> <span id="lePrenom"></span> pour votre commande</p></pre>
+      <p>Vous recevrez un email et un sms de confirmation (<span id="lemail"></span>, <span id="leTel"></span>)</p>
+      <p>Votre addresse de livraison :
+          <span id="lAdresse"></span><br>
+          <span id="leCP"></span>,
+          <span id="laVille"></span><br>
+          <span id="votreCommentaires"></span>
+      </p>
+      </div>
+       
+
+    <script src="form.js"></script>
+</body>
+</html>
